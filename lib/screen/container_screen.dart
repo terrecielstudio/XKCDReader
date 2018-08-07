@@ -8,6 +8,7 @@ import 'package:xkcd_reader/model/app_state.dart';
 import 'package:xkcd_reader/model/comic_state.dart';
 import 'package:xkcd_reader/screen/comic_screen.dart';
 import 'package:xkcd_reader/widget/bottom_nav_bar.dart';
+import 'package:xkcd_reader/widget/comic_navigation_gesture_container.dart';
 
 class ContainerScreen extends StatelessWidget {
   static Random _random = new Random();
@@ -52,31 +53,12 @@ class ContainerScreen extends StatelessWidget {
         final AppState appState = models != null ? models[0] : AppState();
         final Manager<AppState> appStateManager = managers[0];
         return IconButton(
+          tooltip: "Random Comic",
           icon: Icon(Icons.casino),
           onPressed: () {
             var randNumber = _random.nextInt(appState.latestComicNumber + 1);
             appStateManager.model = appState.copyWith(
                 currentComicNumber: randNumber == 0 ? 1 : randNumber);
-          },
-        );
-      },
-    );
-  }
-
-  Widget _buildOpenInBrowserButton() {
-    return Consumer(
-      models: [AppState],
-      builder: (context, models, [managers]) {
-        final AppState appState = models != null ? models[0] : AppState();
-        return FlatButton.icon(
-          icon: Icon(Icons.open_in_browser),
-          label: Text("Open in browser"),
-          onPressed: () async {
-            final url =
-                xkcd.api.provideUrlForComicNumber(appState.currentComicNumber);
-            if (await canLaunch(url)) {
-              await launch(url);
-            } else {}
           },
         );
       },
