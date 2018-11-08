@@ -1,4 +1,4 @@
-import 'package:basal/basal.dart';
+import 'package:xkcd_reader/basal.dart';
 import 'package:flutter/material.dart';
 import 'package:xkcd_reader/model/app_state.dart';
 import 'package:xkcd_reader/model/comic_state.dart';

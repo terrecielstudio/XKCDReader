@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:basal/basal.dart';
+import 'package:xkcd_reader/basal.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:xkcd_reader/api/xkcd.dart';

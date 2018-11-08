@@ -1,4 +1,4 @@
-import 'package:basal/basal.dart';
+import 'package:xkcd_reader/basal.dart';
 
 class ComicState extends Model {
   final String comicTitle;
