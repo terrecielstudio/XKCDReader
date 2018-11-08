@@ -1,4 +1,4 @@
-import 'package:basal/basal.dart';
+import 'package:xkcd_reader/basal.dart';
 import 'package:xkcd_reader/model/comic_data.dart';
 
 class AppState extends Model {

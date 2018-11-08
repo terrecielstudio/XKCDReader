@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:basal/basal.dart';
+import 'package:xkcd_reader/basal.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_networkimage/flutter_advanced_networkimage.dart';
 import 'package:flutter_advanced_networkimage/transition_to_image.dart';

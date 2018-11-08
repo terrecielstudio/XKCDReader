@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:basal/basal.dart';
+import 'package:xkcd_reader/basal.dart';
 import 'package:flutter/material.dart';
 import 'package:xkcd_reader/api/xkcd.dart';
 import 'package:xkcd_reader/model/app_state.dart';
